@@ -1,0 +1,49 @@
+package fr.linedev.infinityliquid.tools;
+
+import fr.linedev.infinityliquid.managers.Managers;
+
+import java.util.List;
+
+public class ConfigBuilder {
+    public static String getString(String value) {
+        return Managers.getInstance().getConfig().getString(value).replaceAll("&", "§");
+    }
+
+    public static int getInt(String value) {
+        return Managers.getInstance().getConfig().getInt(value);
+    }
+
+    public static boolean getBoolean(String value) {
+        return Managers.getInstance().getConfig().getBoolean(value);
+    }
+
+    public static List getList(String value) {
+        return Managers.getInstance().getConfig().getStringList(value);
+    }
+
+    public static double getDouble(String value) {
+        return Managers.getInstance().getConfig().getDouble(value);
+    }
+
+    public static void set(String value, Object data) {
+        Managers.getInstance().getConfig().set(value, data);
+        Managers.getInstance().saveConfig();
+        Managers.getInstance().reloadConfig();
+    }
+
+    public static void reload() {
+        Managers.getInstance().reloadConfig();
+    }
+
+    public static void saveDefaultConfig() {
+        Managers.getInstance().saveDefaultConfig();
+    }
+
+    public static void saveConfig() {
+        Managers.getInstance().saveConfig();
+    }
+
+    public static void copyDefaults() {
+        Managers.getInstance().getConfig().options().copyDefaults();
+    }
+}

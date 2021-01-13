@@ -1,0 +1,33 @@
+name: InifintyLiquid
+main: fr.linedev.infinityliquid.InfinityLiquidMain
+version: 1.0.00
+description: Plugin Tutoriel pour notre serie
+author: Linedev
+api-version: 1.15
+depend: [Vault]
+
+
+commands:
+  infliquid:
+    description: Main command
+    usage: /infliquid help
+permissions:
+  infliquid.*:
+    default: false
+    description: Includes all permissions of this plugin
+    children:
+      infliquid.all: true
+  infliquid.all:
+    default: false
+    description: Includes all permissions of this plugin
+    children:
+      infliquid.reload: true
+      infliquid.use.*: true
+      infliquid.give: true
+      infliquid.help: true
+  infliquid.use.*:
+    default: true
+    description: Allows use of all the buckets
+    children:
+      infliquid.use.lava: true
+      infliquid.use.water: true

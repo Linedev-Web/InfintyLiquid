@@ -1,0 +1,21 @@
+globals:
+  enchant: true
+  notEnoughPermissions: '&cYou do not have permission:&f %permission%'
+  subtractMoney: '&c-%cost%$'
+  notEnoughMoney: '&cNot enough money'
+
+water:
+  displayName: '&bInfinite Water Bucket'
+  price: 50
+  lore:
+    - '--------------'
+    - '&aPrice: %cost%'
+    - '--------------'
+
+lava:
+  displayName: '&cInfinite Lava Bucket'
+  price: 100
+  lore:
+    - '--------------'
+    - '&aPrice: %cost%'
+    - '--------------'
